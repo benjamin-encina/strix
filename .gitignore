@@ -1,12 +1,58 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Ignored default folder with query files
-/queries/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-target/
+﻿# ===========================
+# IntelliJ / IDE
+# ===========================
+.idea/
 *.iml
+*.iws
+*.ipr
+out/
+build/
+
+# ===========================
+# Maven / Gradle
+# ===========================
+target/
+*.log
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# ===========================
+# Java / Spring Boot
+# ===========================
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tmp
+*.bak
+
+# ===========================
+# Sistema operativo
+# ===========================
+.DS_Store
+Thumbs.db
+
+# ===========================
+# Entornos y secretos (NUNCA subir)
+# ===========================
+*.env
+*.key
+*.pem
+application-local.properties
+application-dev.properties
+
+# ===========================
+# Microservicios en desarrollo local (ajusta según necesites)
+# ===========================
+# ms-adjuntos/
+# ms-comentarios/
+# ms-historial/
+# ms-notificaciones/
+# ms-prioridades/
+# ms-reportes/
+# ms-tickets/
