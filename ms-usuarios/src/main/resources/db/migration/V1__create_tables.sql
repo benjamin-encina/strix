@@ -1,0 +1,17 @@
+CREATE TABLE usuarios (
+    id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre      VARCHAR(100) NOT NULL,
+    apellido    VARCHAR(100) NOT NULL,
+    email       VARCHAR(150) NOT NULL UNIQUE,
+    password    VARCHAR(255) NOT NULL,
+    rol         ENUM('USUARIO','TECNICO','ADMIN') NOT NULL DEFAULT 'USUARIO',
+    activo      BOOLEAN NOT NULL DEFAULT TRUE,
+    creado_en   DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE jwt_blacklist (
+    id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+    token_hash  VARCHAR(512) NOT NULL,
+    expira_en   DATETIME NOT NULL,
+    invalidado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
