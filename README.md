@@ -114,7 +114,7 @@ PATCH  /api/tickets/{id}/cerrar        → cerrar con solución           \[TÉC
 
 PATCH  /api/tickets/{id}/cancelar      → cancelar ticket               \[USUARIO / ADMIN]
 
-PATCH  /api/tickets/{id}/reabrir       → volver a estado ABIERTO       \[ADMIN]    
+PATCH  /api/tickets/{id}/reabrir       → volver a estado ABIERTO       \[ADMIN]
 
 
 
@@ -174,13 +174,13 @@ DELETE  /api/categorias/{id}   → desactivar
 
 
 
-**GET     /api/prioridades        → listar**
+GET     /api/prioridades        → listar
 
-**POST    /api/prioridades        → crear**
+POST    /api/prioridades        → crear
 
-**PUT     /api/prioridades/{id}   → editar**
+PUT     /api/prioridades/{id}   → editar
 
-**DELETE  /api/prioridades/{id}   → desactivar**
+DELETE  /api/prioridades/{id}   → desactivar
 
 
 
