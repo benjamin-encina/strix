@@ -84,5 +84,3 @@ En muchas organizaciones el soporte técnico se gestiona de forma desordenada: s
 - Maven 3.x
 - MySQL 8 o MariaDB corriendo en `localhost:3306`
 - Usuario `root` sin contraseña (o configurar `spring.datasource.password` en cada `application.properties`)
-
-```
