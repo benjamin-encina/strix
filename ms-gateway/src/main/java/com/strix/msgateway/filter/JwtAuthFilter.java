@@ -44,7 +44,6 @@ public class JwtAuthFilter extends AbstractGatewayFilterFactory<JwtAuthFilter.Co
                         .parseSignedClaims(token)
                         .getPayload();
 
-                // Propagar usuarioId y rol como headers internos
                 ServerWebExchange mutated = exchange.mutate()
                         .request(r -> r.headers(headers -> {
                             headers.set("X-Usuario-Id", claims.get("usuarioId").toString());
