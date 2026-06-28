@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.strix</groupId>
+    <artifactId>strix-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>Strix API — Help Desk IT</name>
+    <description>Proyecto padre multi-modulo de Strix</description>
+
+    <!--
+        Declara los 10 microservicios como modulos.
+        Al abrir este pom.xml en IntelliJ, todos los modulos
+        se importan correctamente con sus dependencias.
+    -->
+    <modules>
+        <module>ms-gateway</module>
+        <module>ms-usuarios</module>
+        <module>ms-categorias</module>
+        <module>ms-prioridades</module>
+        <module>ms-tickets</module>
+        <module>ms-comentarios</module>
+        <module>ms-historial</module>
+        <module>ms-adjuntos</module>
+        <module>ms-notificaciones</module>
+        <module>ms-reportes</module>
+    </modules>
+
+</project>
