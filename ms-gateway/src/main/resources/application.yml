@@ -5,76 +5,74 @@ spring:
     discovery:
       enabled: false
     gateway:
-      server:
-        webflux:
-          routes:
-            - id: ms-usuarios-auth
-              uri: http://localhost:8081
-              predicates:
-                - Path=/auth/**
+      routes:
+        - id: ms-usuarios-auth
+          uri: http://localhost:8081
+          predicates:
+            - Path=/auth/**
 
-            - id: ms-usuarios
-              uri: http://localhost:8081
-              predicates:
-                - Path=/api/usuarios/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-usuarios
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/usuarios/**
+          filters:
+            - name: JwtAuthFilter
 
-            - id: ms-categorias
-              uri: http://localhost:8082
-              predicates:
-                - Path=/api/categorias/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-categorias
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/categorias/**
+          filters:
+            - name: JwtAuthFilter
 
-            - id: ms-prioridades
-              uri: http://localhost:8083
-              predicates:
-                - Path=/api/prioridades/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-prioridades
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/prioridades/**
+          filters:
+            - name: JwtAuthFilter
 
-            - id: ms-tickets
-              uri: http://localhost:8084
-              predicates:
-                - Path=/api/tickets/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-tickets
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/tickets/**
+          filters:
+            - name: JwtAuthFilter
 
-            - id: ms-comentarios
-              uri: http://localhost:8085
-              predicates:
-                - Path=/api/comentarios/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-comentarios
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/comentarios/**
+          filters:
+            - name: JwtAuthFilter
 
-            - id: ms-historial
-              uri: http://localhost:8086
-              predicates:
-                - Path=/api/historial/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-historial
+          uri: http://localhost:8086
+          predicates:
+            - Path=/api/historial/**
+          filters:
+            - name: JwtAuthFilter
 
-            - id: ms-adjuntos
-              uri: http://localhost:8087
-              predicates:
-                - Path=/api/adjuntos/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-adjuntos
+          uri: http://localhost:8087
+          predicates:
+            - Path=/api/adjuntos/**
+          filters:
+            - name: JwtAuthFilter
 
-            - id: ms-notificaciones
-              uri: http://localhost:8088
-              predicates:
-                - Path=/api/notificaciones/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-notificaciones
+          uri: http://localhost:8088
+          predicates:
+            - Path=/api/notificaciones/**
+          filters:
+            - name: JwtAuthFilter
 
-            - id: ms-reportes
-              uri: http://localhost:8089
-              predicates:
-                - Path=/api/reportes/**
-              filters:
-                - name: JwtAuthFilter
+        - id: ms-reportes
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/reportes/**
+          filters:
+            - name: JwtAuthFilter
 
   autoconfigure:
     exclude:
